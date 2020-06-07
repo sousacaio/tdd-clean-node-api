@@ -2,7 +2,6 @@
     "compilerOptions": {
         //Onde a gente quer gerar o nosso código js
         "outDir": "./dist",
-        //
         "module": "CommonJS",
         //Padrão do js
         "target": "ES2019",
