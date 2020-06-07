@@ -1,6 +1,7 @@
 /* eslint-disable @typescript-eslint/indent */
+import { HttpRequest, HttpResponse } from '../protocols/http'
 export class SignUpController {
-    handle (httpRequest: any): any {
+    handle(httpRequest: HttpRequest): HttpResponse {
         if (!httpRequest.body.name) {
             return {
                 statusCode: 400,
@@ -10,7 +11,7 @@ export class SignUpController {
         if (!httpRequest.body.email) {
             return {
                 statusCode: 400,
-                email: new Error('Missing param: name')
+                email: new Error('Missing param: email')
             }
         }
     }
