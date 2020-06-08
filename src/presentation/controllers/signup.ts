@@ -1,10 +1,7 @@
 /* eslint-disable @typescript-eslint/indent */
-import { HttpRequest, HttpResponse } from '../protocols/http'
 import { MissingParamError, InvalidParamError } from '../errors'
 import { badRequest, serverError } from '../helpers/http-helper'
-import { Controller } from '../protocols/controler'
-import { EmailValidator } from '../protocols/email-validator'
-
+import { Controller, EmailValidator, HttpRequest, HttpResponse } from '../protocols'
 export class SignUpController implements Controller {
     private readonly emailValidator: EmailValidator
     constructor(emailValidator: EmailValidator) {
